@@ -8,6 +8,7 @@
     <None Remove="Models\" />
     <None Remove="Controllers\" />
     <None Remove="Microsoft.EntityFrameworkCore.Sqlite" />
+    <None Remove="Microsoft.EntityFrameworkCore.Proxies" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
@@ -21,5 +22,6 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="3.1.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="3.1.4" />
   </ItemGroup>
 </Project>

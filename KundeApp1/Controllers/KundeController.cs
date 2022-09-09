@@ -12,20 +12,43 @@ namespace KundeApp1.Controllers
     public class KundeController : ControllerBase
     {
 
-        private readonly KundeDb _kundeDB; // Vanlig å ha understrek foran private variabler i C#
+        private readonly KundeContekst _kundeDB; // Vanlig å ha understrek foran private variabler i C#
 
-        public KundeController (KundeDb kundeDb)
+        public KundeController (KundeContekst kundeDb)
         {
             _kundeDB = kundeDb;
         }
 
         public async Task<bool> Lagre(Kunde innKunde)
         {
-            try
-            {
+            try {
+                var nyKundeRad = new Kunder();
+                nyKundeRad.Fornavn = innKunde.Fornavn;
+                nyKundeRad.Etternavn = innKunde.Etternavn;
+                nyKundeRad.Adresse = innKunde.Adresse;
+
+                var sjekkPoststed = _kundeDB.Poststeder.Find(innKunde.Postnr);
+                if (sjekkPoststed == null)
+                {
+                    var nyPoststedsRad = new Poststeder();
+                    nyPoststedsRad.Postnr = innKunde.Postnr;
+                    nyPoststedsRad.Poststed = innKunde.Poststed;
+                    nyKundeRad.Poststed = nyPoststedsRad;
+                }
+                else
+                {
+                    nyKundeRad.Poststed = sjekkPoststed;
+                }
+
+                _kundeDB.Add(nyKundeRad);
+                await _kundeDB.SaveChangesAsync();
+                return true;
+
+                /*
                 _kundeDB.Kunder.Add(innKunde);
                 await _kundeDB.SaveChangesAsync();
                 return true;
+                */
             }
             catch
             {
@@ -40,8 +63,22 @@ namespace KundeApp1.Controllers
         {
             try
             {
+                List<Kunde> alleKunder = await _kundeDB.Kunder.Select(k => new Kunde
+                {
+                    Id = k.Id,
+                    Fornavn = k.Fornavn,
+                    Etternavn = k.Etternavn,
+                    Adresse = k.Adresse,
+                    Postnr = k.Poststed.Postnr,
+                    Poststed = k.Poststed.Poststed
+
+                }).ToListAsync();
+
+                return alleKunder;
+                /*
                 List<Kunde> alleKundene = await _kundeDB.Kunder.ToListAsync(); // hent hele tabellen
                 return alleKundene;
+                */
             }
             catch
             {
@@ -53,7 +90,7 @@ namespace KundeApp1.Controllers
         {
             try
             {
-                Kunde enKunde = await _kundeDB.Kunder.FindAsync(id);
+                Kunder enKunde = await _kundeDB.Kunder.FindAsync(id);
                 _kundeDB.Remove(enKunde);
                 await _kundeDB.SaveChangesAsync();
                 return true;
@@ -69,8 +106,17 @@ namespace KundeApp1.Controllers
         {
             try
             {
-                Kunde enKunde = await _kundeDB.Kunder.FindAsync(id);
-                return enKunde;
+                Kunder enKunde = await _kundeDB.Kunder.FindAsync(id);
+                var hentetKunde = new Kunde()
+                {
+                    Id = enKunde.Id,
+                    Fornavn = enKunde.Fornavn,
+                    Etternavn = enKunde.Etternavn,
+                    Adresse = enKunde.Adresse,
+                    Postnr = enKunde.Poststed.Postnr,
+                    Poststed = enKunde.Poststed.Poststed
+                };
+                return hentetKunde;
             }
             catch
             {
@@ -82,8 +128,26 @@ namespace KundeApp1.Controllers
         {
             try
             {
-                Kunde enKunde = await _kundeDB.Kunder.FindAsync(endreKunde.Id);
-                enKunde.Navn = endreKunde.Navn;
+                Kunder enKunde = await _kundeDB.Kunder.FindAsync(endreKunde.Id);
+
+                if (enKunde.Poststed.Postnr != endreKunde.Postnr)
+                {
+                    var sjekkPoststed = _kundeDB.Poststeder.Find(endreKunde.Postnr);
+                    if (sjekkPoststed == null)
+                    {
+                        var nyPoststedsRad = new Poststeder();
+                        nyPoststedsRad.Postnr = endreKunde.Postnr;
+                        nyPoststedsRad.Poststed = endreKunde.Poststed;
+                        enKunde.Poststed = nyPoststedsRad;
+                    }
+                    else
+                    {
+                        enKunde.Poststed = sjekkPoststed;
+                    }
+                }
+
+                enKunde.Fornavn = endreKunde.Fornavn;
+                enKunde.Etternavn = endreKunde.Etternavn;
                 enKunde.Adresse = endreKunde.Adresse;
                 await _kundeDB.SaveChangesAsync();
                 return true;
