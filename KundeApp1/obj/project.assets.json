@@ -1044,11 +1044,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/gurjotsinghaulakh/Library/CloudStorage/OneDrive-OsloMet/Dataingeniør - Bachelour/Semester 5/ITPE3200 – Webapplikasjoner/KundeApp1/KundeApp1/KundeApp1/KundeApp1.csproj",
+      "projectUniqueName": "/Users/gurjotsinghaulakh/Github Repositories/Webapplications/KundeApp1/KundeApp1.csproj",
       "projectName": "KundeApp1",
-      "projectPath": "/Users/gurjotsinghaulakh/Library/CloudStorage/OneDrive-OsloMet/Dataingeniør - Bachelour/Semester 5/ITPE3200 – Webapplikasjoner/KundeApp1/KundeApp1/KundeApp1/KundeApp1.csproj",
+      "projectPath": "/Users/gurjotsinghaulakh/Github Repositories/Webapplications/KundeApp1/KundeApp1.csproj",
       "packagesPath": "/Users/gurjotsinghaulakh/.nuget/packages/",
-      "outputPath": "/Users/gurjotsinghaulakh/Library/CloudStorage/OneDrive-OsloMet/Dataingeniør - Bachelour/Semester 5/ITPE3200 – Webapplikasjoner/KundeApp1/KundeApp1/KundeApp1/obj/",
+      "outputPath": "/Users/gurjotsinghaulakh/Github Repositories/Webapplications/KundeApp1/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/gurjotsinghaulakh/.nuget/NuGet/NuGet.Config"

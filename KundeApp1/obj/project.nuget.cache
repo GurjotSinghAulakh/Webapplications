@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "fAfRg6858QHP6sFy5oBP0u/sOZXC7uIEu5gbwge1u/0BrF6hJfmnup9coxsMRqfykqbYBU9GQF/hQpRAgBlZPw==",
+  "dgSpecHash": "LFTle73ohZ372JvpaPa2FLkLosxQTnIrxeCLvEWhtBcxv68OWRwsrKjMvfbLin0EzRoREIn4wSrwYWY2xnu92Q==",
   "success": true,
-  "projectFilePath": "/Users/gurjotsinghaulakh/Library/CloudStorage/OneDrive-OsloMet/Dataingeniør - Bachelour/Semester 5/ITPE3200 – Webapplikasjoner/KundeApp1/KundeApp1/KundeApp1/KundeApp1.csproj",
+  "projectFilePath": "/Users/gurjotsinghaulakh/Github Repositories/Webapplications/KundeApp1/KundeApp1.csproj",
   "expectedPackageFiles": [
     "/Users/gurjotsinghaulakh/.nuget/packages/microsoft.bcl.asyncinterfaces/1.1.1/microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "/Users/gurjotsinghaulakh/.nuget/packages/microsoft.bcl.hashcode/1.1.0/microsoft.bcl.hashcode.1.1.0.nupkg.sha512",

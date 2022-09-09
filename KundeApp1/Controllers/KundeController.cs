@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using KundeApp1.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -18,12 +19,12 @@ namespace KundeApp1.Controllers
             _kundeDB = kundeDb;
         }
 
-        public bool Lagre(Kunde innKunde)
+        public async Task<bool> Lagre(Kunde innKunde)
         {
             try
             {
                 _kundeDB.Kunder.Add(innKunde);
-                _kundeDB.SaveChanges();
+                await _kundeDB.SaveChangesAsync();
                 return true;
             }
             catch
@@ -35,11 +36,11 @@ namespace KundeApp1.Controllers
 
 
 
-        public List<Kunde> HentAlle()
+        public async Task<List<Kunde>> HentAlle()
         {
             try
             {
-                List<Kunde> alleKundene = _kundeDB.Kunder.ToList(); // hent hele tabellen
+                List<Kunde> alleKundene = await _kundeDB.Kunder.ToListAsync(); // hent hele tabellen
                 return alleKundene;
             }
             catch
@@ -48,13 +49,13 @@ namespace KundeApp1.Controllers
             }
         }
 
-        public bool Slett(int id)
+        public async Task<bool> Slett(int id)
         {
             try
             {
-                Kunde enKunde = _kundeDB.Kunder.Find(id);
+                Kunde enKunde = await _kundeDB.Kunder.FindAsync(id);
                 _kundeDB.Remove(enKunde);
-                _kundeDB.SaveChanges();
+                await _kundeDB.SaveChangesAsync();
                 return true;
             }
             catch
@@ -64,11 +65,11 @@ namespace KundeApp1.Controllers
         }
 
 
-        public Kunde HentEn(int id)
+        public async Task<Kunde> HentEn(int id)
         {
             try
             {
-                Kunde enKunde = _kundeDB.Kunder.Find(id);
+                Kunde enKunde = await _kundeDB.Kunder.FindAsync(id);
                 return enKunde;
             }
             catch
@@ -77,14 +78,14 @@ namespace KundeApp1.Controllers
             }
         }
 
-        public bool Endre(Kunde endreKunde)
+        public async Task<bool> Endre(Kunde endreKunde)
         {
             try
             {
-                Kunde enKunde = _kundeDB.Kunder.Find(endreKunde.Id);
+                Kunde enKunde = await _kundeDB.Kunder.FindAsync(endreKunde.Id);
                 enKunde.Navn = endreKunde.Navn;
                 enKunde.Adresse = endreKunde.Adresse;
-                _kundeDB.SaveChanges();
+                await _kundeDB.SaveChangesAsync();
                 return true;
             }
             catch
