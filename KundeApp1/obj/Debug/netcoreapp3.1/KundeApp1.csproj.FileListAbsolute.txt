@@ -65,12 +65,14 @@
 /Users/gurjotsinghaulakh/Github Repositories/Webapplications/KundeApp1/bin/Debug/netcoreapp3.1/KundeApp1.runtimeconfig.dev.json
 /Users/gurjotsinghaulakh/Github Repositories/Webapplications/KundeApp1/bin/Debug/netcoreapp3.1/KundeApp1.dll
 /Users/gurjotsinghaulakh/Github Repositories/Webapplications/KundeApp1/bin/Debug/netcoreapp3.1/KundeApp1.pdb
+/Users/gurjotsinghaulakh/Github Repositories/Webapplications/KundeApp1/bin/Debug/netcoreapp3.1/Castle.Core.dll
 /Users/gurjotsinghaulakh/Github Repositories/Webapplications/KundeApp1/bin/Debug/netcoreapp3.1/Microsoft.Bcl.AsyncInterfaces.dll
 /Users/gurjotsinghaulakh/Github Repositories/Webapplications/KundeApp1/bin/Debug/netcoreapp3.1/Microsoft.Bcl.HashCode.dll
 /Users/gurjotsinghaulakh/Github Repositories/Webapplications/KundeApp1/bin/Debug/netcoreapp3.1/Microsoft.Data.Sqlite.dll
 /Users/gurjotsinghaulakh/Github Repositories/Webapplications/KundeApp1/bin/Debug/netcoreapp3.1/Microsoft.DotNet.PlatformAbstractions.dll
 /Users/gurjotsinghaulakh/Github Repositories/Webapplications/KundeApp1/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.dll
 /Users/gurjotsinghaulakh/Github Repositories/Webapplications/KundeApp1/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.Abstractions.dll
+/Users/gurjotsinghaulakh/Github Repositories/Webapplications/KundeApp1/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.Proxies.dll
 /Users/gurjotsinghaulakh/Github Repositories/Webapplications/KundeApp1/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.Relational.dll
 /Users/gurjotsinghaulakh/Github Repositories/Webapplications/KundeApp1/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.Sqlite.dll
 /Users/gurjotsinghaulakh/Github Repositories/Webapplications/KundeApp1/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Caching.Abstractions.dll

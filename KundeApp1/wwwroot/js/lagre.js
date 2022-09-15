@@ -1,7 +1,10 @@
 ﻿function lagreKunde() {
     const kunde = {
-        navn: $("#navn").val(),
-        adresse: $("#adresse").val()
+        fornavn: $("#fornavn").val(),
+        etternavn: $("#etternavn").val(),
+        adresse: $("#adresse").val(),
+        postnr: $("#postnr").val(),
+        poststed: $("#poststed").val()
     }
     const url = "Kunde/Lagre";
     $.post(url, kunde, function (OK) {

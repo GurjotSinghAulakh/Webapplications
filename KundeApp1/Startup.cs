@@ -19,7 +19,7 @@ namespace KundeApp1
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            services.AddDbContext<KundeDb>(options =>
+            services.AddDbContext<KundeContekst>(options =>
             {
                 options.UseSqlite("Data source=Kunde.db");
             });
