@@ -1,19 +1,22 @@
 ﻿<Properties StartupConfiguration="{D5EBF3FB-6A90-4EC8-99C0-43B2B2DBED24}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="KundeApp1/Program.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workbench ActiveDocument="KundeApp1/DAL/KundeRepository.cs">
     <Files>
       <File FileName="KundeApp1/wwwroot/js/index.js" Line="1" Column="1" />
       <File FileName="KundeApp1/wwwroot/js/lagre.js" Line="1" Column="1" />
       <File FileName="KundeApp1/wwwroot/endre.html" Line="6" Column="1" />
       <File FileName="KundeApp1/wwwroot/index.html" Line="4" Column="29" />
       <File FileName="KundeApp1/wwwroot/lagre.html" Line="11" Column="28" />
-      <File FileName="KundeApp1/Models/DBInit.cs" Line="1" Column="1" />
-      <File FileName="KundeApp1/Startup.cs" Line="1" Column="1" />
-      <File FileName="KundeApp1/Properties/launchSettings.json" Line="23" Column="47" />
+      <File FileName="KundeApp1/Startup.cs" Line="42" Column="49" />
+      <File FileName="KundeApp1/Properties/launchSettings.json" Line="23" Column="26" />
       <File FileName="KundeApp1/wwwroot/js/endre.js" Line="10" Column="42" />
-      <File FileName="KundeApp1/Controllers/KundeController.cs" Line="157" Column="30" />
-      <File FileName="KundeApp1/Models/Kunde.cs" Line="1" Column="1" />
-      <File FileName="KundeApp1/Models/KundeContekst.cs" Line="28" Column="57" />
-      <File FileName="KundeApp1/Program.cs" Line="28" Column="1" />
+      <File FileName="KundeApp1/Controllers/KundeController.cs" Line="48" Column="1" />
+      <File FileName="KundeApp1/Models/Kunde.cs" Line="10" Column="43" />
+      <File FileName="KundeApp1/Program.cs" Line="16" Column="1" />
+      <File FileName="KundeApp1/DAL/KundeRepository.cs" Line="30" Column="1" />
+      <File FileName="KundeApp1/DAL/IKundeRepository.cs" Line="19" Column="1" />
+      <File FileName="KundeApp1/DAL/DBInit.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -21,6 +24,7 @@
           <Node name="KundeApp1" expanded="True">
             <Node name="KundeApp1" expanded="True">
               <Node name="Controllers" expanded="True" />
+              <Node name="DAL" expanded="True" />
               <Node name="Models" expanded="True" />
               <Node name="Properties" expanded="True" />
               <Node name="wwwroot" expanded="True">
@@ -40,6 +44,4 @@
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
 </Properties>
